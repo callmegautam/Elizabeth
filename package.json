@@ -5,17 +5,15 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "dev": "ts-node --loader ts-node/esm init_test/test.ts",
+        "dev": "tsx --watch src/app.ts",
         "build": "tsc",
-        "start": "node dist/index.js"
+        "start": "node dist/app.js"
     },
     "keywords": [],
     "author": "Gautam Suthar <iamgautamsuthar@outlook.com> (https://github.com/callmegautam)",
     "license": "ISC",
     "packageManager": "pnpm@10.11.1",
-    "dependencies": {
-        "edge-tts": "^1.0.1"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@types/node": "^24.2.0",
         "ts-node": "^10.9.2",

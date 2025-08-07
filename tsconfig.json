@@ -1,15 +1,23 @@
 {
     "compilerOptions": {
+        "checkJs": true,
+        "target": "ESNext",
         "module": "ESNext",
-        "target": "ES2022",
-        "moduleResolution": "NodeNext",
+        "rootDir": "./",
+        "outDir": "./dist",
         "esModuleInterop": true,
-        "resolveJsonModule": true,
-        "outDir": "dist",
-        "allowImportingTsExtensions": true,
-        "strict": true
+        "strict": true,
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "paths": {
+            "@/*": ["./src/*"],
+            "$/*": ["./*"]
+        }
     },
-    "ts-node": {
-        "esm": true
+    "exclude": ["node_modules"],
+    "include": ["src/**/*.ts"],
+    "tsc-alias": {
+        "resolveFullPaths": true,
+        "verbose": true
     }
 }
