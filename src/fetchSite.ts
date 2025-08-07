@@ -24,7 +24,10 @@ export default async function fetchSite(url: string) {
     const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
     await sleep(1000);
     const content = await page.content();
-    fs.writeFileSync("output.html", content);
+    let title = await page.title();
+    title = title.replace(/\s+/g, "-").toLowerCase();
+
+    fs.writeFileSync(`./${title}.html`, content);
     console.log("\n=== Page content (preview) ===\n");
     console.log(content.slice(0, 1000));
 
