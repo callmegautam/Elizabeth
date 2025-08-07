@@ -5,7 +5,9 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "test": "node init_test/test.js"
+        "dev": "ts-node --loader ts-node/esm init_test/test.ts",
+        "build": "tsc",
+        "start": "node dist/index.js"
     },
     "keywords": [],
     "author": "Gautam Suthar <iamgautamsuthar@outlook.com> (https://github.com/callmegautam)",
@@ -13,5 +15,10 @@
     "packageManager": "pnpm@10.11.1",
     "dependencies": {
         "edge-tts": "^1.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^24.2.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.2"
     }
 }
