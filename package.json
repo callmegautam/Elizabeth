@@ -1,0 +1,17 @@
+{
+    "name": "elizabeth",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "node init_test/test.js"
+    },
+    "keywords": [],
+    "author": "Gautam Suthar <iamgautamsuthar@outlook.com> (https://github.com/callmegautam)",
+    "license": "ISC",
+    "packageManager": "pnpm@10.11.1",
+    "dependencies": {
+        "say": "^0.16.0"
+    }
+}
